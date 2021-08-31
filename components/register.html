@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#4e13d1" />
+    <title>Fiber | Sign Up</title>
+    <!-- <link rel="icon" type="image/png" href="" /> -->
+    <link rel="stylesheet" href="../css/reg_main.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <form class="form" action="../index.html">
+        <div class="container">
+          <header class="formHeader">
+            <span class="title">Fiber</span><br />
+            <h1>Create your Fiber account</h1>
+          </header>
+          <div class="inputWrapper">
+            <label for="name">Your Name</label>
+            <input id="name" type="text" placeholder="Jhon Doe" />
+          </div>
+
+          <div class="inputWrapper">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="Jhon@example.com" />
+          </div>
+
+          <div class="inputWrapper">
+            <label for="password">Password</label>
+            <div class="pas">
+              <input
+                id="password"
+                type="password"
+                placeholder="At least 8 Character"
+              />
+              <div class="hide">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 12C15 13.654 13.654 15 12 15C10.346 15 9 13.654 9 12C9 10.346 10.346 9 12 9C13.654 9 15 10.346 15 12ZM24 11.551C24 11.551 19.748 20 12.015 20C4.835 20 0 11.551 0 11.551C0 11.551 4.446 4 12.015 4C19.709 4 24 11.551 24 11.551ZM17 12C17 9.243 14.757 7 12 7C9.243 7 7 9.243 7 12C7 14.757 9.243 17 12 17C14.757 17 17 14.757 17 12Z"
+                    fill="#A9A9A9"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputWrapper checkbox">
+            <input id="agree" type="checkbox" value="agree" />
+            <label for="agree"
+              >By creating an account on Fiber, you agree to the
+              <a href="#">Terms & Conditions.</a></label
+            >
+          </div>
+          <input
+            role="button"
+            id="sub"
+            class="submit"
+            type="submit"
+            value="Create Fiber Account"
+          />
+          <span class="already"
+            >Already have an account? <a href="#">sign in</a></span
+          >
+        </div>
+      </form>
+      <div class="imageSlider">
+        <div class="fromImg">
+          <img src="../Assets/Page Image.png" />
+        </div>
+        <h2>Unparalleled Templates</h2>
+        <p>
+          Crafted by a team of proffesional designer, our templates are
+          eunparalleled in the mraket
+        </p>
+        <div class="circles">
+          <div class="circle active"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal-wrapper">
+      <div class="modal">
+        <h2>Your account has been created</h2>
+        <p>
+          this is just fake website. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Dignissimos cumque perferendis, libero hic
+          distinctio facere.
+        </p>
+        <form action="../index.html" method="post">
+          <input value="close" type="submit" id="close" />
+        </form>
+        <a class="anchor" href="https://kraken-afk.github.io"
+          >kraken-afk.github.io</a
+        >
+      </div>
+    </div>
+    <!-- modal -->
+    <script src="../script/form.js" charset="utf-8"></script>
+  </body>
+</html>

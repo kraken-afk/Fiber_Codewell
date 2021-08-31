@@ -1,0 +1,305 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.2s;
+}
+
+*:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* base */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+/* font-family: 'Inter', sans-serif; */
+
+:root {
+  --color-primary: #4e13d1;
+  --color-secondary: #fbf8f3;
+
+  --ff-prime: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--ff-prime);
+  /* overflow: hidden; */
+}
+
+p {
+  opacity: 0.8;
+}
+
+.container {
+  margin: 2rem min(5%, 4rem);
+}
+
+a {
+  display: inline-block;
+}
+
+/* Style */
+.title {
+  font-weight: 600;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imageSlider {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formHeader h1 {
+  margin: 2.5rem 0;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.inputWrapper {
+  margin: 1.5rem 0;
+}
+
+.inputWrapper label {
+  font-weight: 600;
+}
+
+.inputWrapper input {
+  display: block;
+  padding: 0.8rem 1rem;
+  width: 80%;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 0.5rem;
+}
+
+.inputWrapper input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.pas {
+  position: relative;
+}
+
+.hide {
+  position: absolute;
+  top: 55%;
+  right: 22%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.hide svg,
+.hide path {
+  pointer-events: none;
+}
+
+.checkbox label {
+  font-size: clamp(0.7rem, 3vw, 0.8rem);
+  line-height: 1.5rem;
+}
+
+.checkbox a {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
+}
+
+#agree {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(2px);
+  filter: drop-shadow(0 0 0.5px black);
+  margin-right: 8px;
+}
+
+.submit {
+  display: block;
+  width: 80%;
+  height: 3rem;
+  margin: 2rem 0 1.5rem 0;
+  font-weight: 600;
+  font-family: var(--ff-prime);
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.allCheck {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.submit:active {
+  transform: scale(0.97);
+  opacity: 0.7;
+}
+
+.already {
+  display: block;
+  text-align: center;
+  transform: translateX(-4rem);
+  font-size: 0.8rem;
+}
+
+.fromImg {
+  width: 70%;
+}
+
+.fromImg img {
+  width: 100%;
+}
+
+.imageSlider h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.imageSlider p {
+  text-align: center;
+  color: #fff;
+  max-width: 60%;
+}
+
+.circles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.circle {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 0.5rem;
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+}
+
+.circle:last-child {
+  margin-right: 0;
+}
+
+input.succes {
+  border: 2px solid var(--color-primary);
+}
+
+input.error {
+  border: 2px solid tomato;
+}
+
+.unhide path {
+  fill: var(--color-primary);
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: #fff;
+  width: 35rem;
+  max-width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.modal h2 {
+  margin: 0.5rem 0;
+  color: var(--color-primary);
+}
+
+.modal p {
+  font-size: clamp(0.7rem, 3vw, 1rem);
+  line-height: 1.5rem;
+  opacity: 0.7;
+  max-width: 60%;
+  margin: 1rem auto;
+}
+
+.anchor {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration-style: wavy;
+  text-decoration-color: var(--color-primary);
+}
+
+#close {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--ff-prime);
+  font-weight: 600;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#close:active {
+  opacity: 0.7;
+  transform: scale(0.96);
+}
+
+@media screen and (max-width: 760px) {
+  .imageSlider {
+    display: none;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .inputWrapper input,
+  #sub {
+    width: 100%;
+  }
+
+  .already {
+    margin: 0 auto;
+    transform: rotateX(0);
+  }
+
+  .hide {
+    right: 1rem;
+  }
+}
+
+.modal-wrapper.show {
+  visibility: visible;
+  opacity: 1;
+}
